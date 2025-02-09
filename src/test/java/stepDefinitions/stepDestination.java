@@ -18,12 +18,11 @@ public class stepDestination extends Utilities {
     Response response;
     ResponseSpecification resSpec;
     RequestSpecification res;
-    TestDataBuild data = new TestDataBuild();
 
     @Given("Add Place Payload")
     public void addPlacePayload() {
          resSpec = new ResponseSpecBuilder().expectStatusCode(200).build();
-         res = given().spec(requestSpecification()).body(data.addPlacePayload());
+         res = given().spec(requestSpecification()).body(TestDataBuild.addPlacePayload());
     }
 
     @When("User calls {string} with POST http request")
