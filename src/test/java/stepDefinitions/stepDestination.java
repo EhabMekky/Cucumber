@@ -11,6 +11,8 @@ import io.restassured.specification.ResponseSpecification;
 import resources.TestDataBuild;
 import resources.Utilities;
 
+import java.io.FileNotFoundException;
+
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
 
@@ -19,8 +21,11 @@ public class stepDestination extends Utilities {
     ResponseSpecification resSpec;
     RequestSpecification res;
 
+    public stepDestination() throws FileNotFoundException {
+    }
+
     @Given("Add Place Payload")
-    public void addPlacePayload() {
+    public void addPlacePayload() throws FileNotFoundException {
          resSpec = new ResponseSpecBuilder().expectStatusCode(200).build();
          res = given().spec(requestSpecification()).body(TestDataBuild.addPlacePayload());
     }
