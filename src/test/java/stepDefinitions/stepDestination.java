@@ -25,14 +25,14 @@ public class stepDestination extends Utilities {
     public stepDestination() throws FileNotFoundException {
     }
 
-    @Given("Add Place Payload")
-    public void addPlacePayload() throws IOException {
-         resSpec = new ResponseSpecBuilder().expectStatusCode(200).build();
-         res = given().spec(requestSpecification()).body(TestDataBuild.addPlacePayload());
+    @Given("Add Place Payload with {string} {string} {string}")
+    public void add_place_payload_with(String name, String language, String address) throws IOException {
+        res = given().spec(requestSpecification()).body(TestDataBuild.addPlacePayload(name, language, address));
     }
 
     @When("User calls {string} with POST http request")
     public void userCallsWithPOSTHttpRequest(String arg0) {
+        resSpec = new ResponseSpecBuilder().expectStatusCode(200).build();
         response = res.when().post("/maps/api/place/add/json")
                 .then().spec(resSpec).extract().response();
     }

@@ -9,14 +9,14 @@ import java.util.List;
 
 public class TestDataBuild {
 
-        public static AddPlace addPlacePayload() {
+        public static AddPlace addPlacePayload(String name, String language, String address) {
             AddPlace p = new AddPlace();
             p.setAccuracy(50);
-            p.setAddress("29, side layout, cohen 09");
-            p.setLanguage("French-IN");
+            p.setAddress(address);
+            p.setLanguage(language);
             p.setPhone_number("(+91) 983 329 3929");
             p.setWebsite("http://google.com");
-            p.setName("Frontline house");
+            p.setName(name);
             List<String> types = new ArrayList<String>();
             for (String s : Arrays.asList("shoe park", "shop")) {
                 types.add(s);

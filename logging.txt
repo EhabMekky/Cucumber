@@ -12,11 +12,11 @@ Multiparts:		<none>
 Body:
 {
     "accuracy": 50,
-    "name": "Frontline house",
+    "name": "AAhouse",
     "phone_number": "(+91) 983 329 3929",
-    "address": "29, side layout, cohen 09",
+    "address": "World cross center",
     "website": "http://google.com",
-    "language": "French-IN",
+    "language": "English",
     "location": null,
     "types": [
         "shoe park",
@@ -24,7 +24,7 @@ Body:
     ]
 }
 HTTP/1.1 200 OK
-Date: Sun, 23 Feb 2025 16:36:51 GMT
+Date: Sun, 23 Feb 2025 17:17:38 GMT
 Server: Apache/2.4.52 (Ubuntu)
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST
